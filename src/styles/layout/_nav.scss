@@ -1,0 +1,187 @@
+nav {
+    position: absolute;
+    top: 15vh;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 120px;
+    z-index: -1;
+    background-color: $black;
+    @include mq ('medium') {
+        top: 10vh;
+        padding-bottom: 0;
+        height: 37%;
+        background-color: transparent;
+    }
+    .nav__block--title {
+        display: inline;
+        padding: 7px 7px 5px;
+        position: relative;
+        z-index: 1;
+        top: 35px;
+        left: 10%;
+        @include mq ('medium') {
+            left: 25px;
+        }
+    }
+    .title-1 {
+        color: $green;
+        background-color: $black;
+        border: 2px solid $green;
+        transition: 0.3s cubic-bezier(.52, .01, .16, 1);
+        &:hover {
+            color: $black;
+            background-color: $green;
+            transition: 0.3s cubic-bezier(.52, .01, .16, 1);
+        }
+    }
+    .title-2 {
+        color: $yellow;
+        background-color: $black;
+        border: 2px solid $yellow;
+        transition: 0.3s cubic-bezier(.52, .01, .16, 1);
+        &:hover {
+            color: $black;
+            background-color: $yellow;
+            transition: 0.3s cubic-bezier(.52, .01, .16, 1);
+        }
+    }
+    .title-3 {
+        color: $blue;
+        background-color: $black;
+        border: 2px solid $blue;
+        transition: 0.3s cubic-bezier(.52, .01, .16, 1);
+        &:hover {
+            color: $black;
+            background-color: $blue;
+            transition: 0.3s cubic-bezier(.52, .01, .16, 1);
+        }
+    }
+    .title-4 {
+        color: $red;
+        background-color: $black;
+        border: 2px solid $red;
+        transition: 0.3s cubic-bezier(.52, .01, .16, 1);
+        &:hover {
+            color: $black;
+            background-color: $red;
+            transition: 0.3s cubic-bezier(.52, .01, .16, 1);
+        }
+    }
+    ol {
+        list-style-type: none;
+        margin-top: 60px;
+        position: relative;
+        z-index: 1;
+        .nav__list--link {
+            margin-left: 6%;
+            margin-bottom: 18px;
+            @include mq ('medium') {
+                margin-left: 0;
+            }
+            @include mq ('xlarge') {
+                margin-bottom: 21px;
+            }
+        }
+    }
+    .nav__block {
+        display: block;
+        overflow-x: hidden;
+        &:after {
+            content: '';
+            position: absolute;
+            background-color: $black;
+            width: inherit;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            @include mq ('medium') {
+                width: 100%;
+            }
+        }
+        @include mq ('medium') {
+            display: inline-block;
+            width: 50%;
+            height: 390px;
+            float: left;
+            position: relative;
+        }
+        @include mq ('large') {
+            width: 25%;
+            height: 85vh;
+        }
+    }
+    .nav__block--item1 {
+        color: $green;
+    }
+    .nav__block--item2 {
+        color: $yellow;
+        @include mq ('medium') {
+            position: absolute;
+            left: 50%;
+        }
+        @include mq ('large') {
+            left: 25%;
+        }
+    }
+    .nav__block--item3 {
+        color: $blue;
+        @include mq ('medium') {
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+        @include mq ('large') {
+            left: 50%;
+            top: 0;
+        }
+    }
+    .nav__block--item4 {
+        color: $red;
+        @include mq ('medium') {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+        }
+        @include mq ('large') {
+            left: 75%;
+            top: 0;
+        }
+    }
+    .nav__list--link a {
+        position: relative;
+        color: inherit;
+    }
+    .link--item1 a {
+        &:after {
+            background-color: $green;
+        }
+    }
+    .link--item2 a {
+        &:after {
+            background-color: $yellow;
+        }
+    }
+    .link--item3 a {
+        &:after {
+            background-color: $blue;
+        }
+    }
+    .link--item4 a {
+        &:after {
+            background-color: $red;
+        }
+    }
+}
+#nav {
+    overflow-y: scroll;
+    @include mq ('medium') {
+        overflow-y: inherit;
+    }
+}
+.no-underline {
+    &:after {
+        content: '';
+        height: 0;
+    }
+}

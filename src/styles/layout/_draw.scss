@@ -1,0 +1,953 @@
+.point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20%;
+    height: 20%;
+    fill: $green;
+    z-index: 1;
+}
+#point__position {
+    transform: translate(-50%, -50%);
+}
+.point--build {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    fill: none;
+    stroke: $green;
+    stroke-width: 2px;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    z-index: 1;
+}
+#point--build {
+    transform: translate(-50%, -50%);
+}
+.point--build--letter {
+    fill: $green;
+    stroke: $black;
+    stroke-width: 2px;
+}
+.point-build-lineBig {
+    stroke-width: 3px;
+}
+.point-build-lineLittle {
+    stroke-width: 1px;
+}
+.ligne {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 64%;
+    fill: $green;
+    stroke: $green;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+}
+.section__ligne--ellipse-1,
+.section__ligne--ellipse-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 6px;
+    fill: $green;
+}
+#ligne__position {
+    transform: translate(-50%, -50%);
+}
+.surface {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    fill: rgba(98, 246, 146, .2);
+    stroke: $green;
+    stroke-width: 2px;
+}
+.section__surface--ellipse-1,
+.section__surface--ellipse-2,
+.section__surface--ellipse-3,
+.section__surface--ellipse-4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2%;
+    height: 2%;
+    fill: $green;
+}
+#surface__position {
+    transform: translate(-50%, -50%);
+}
+.title-info-position {
+    position: absolute;
+    margin-top: 0;
+    left: 50%;
+    font-size: 65%;
+    text-align: center;
+    transform: translateX(-50%);
+    @include mq ('medium') {
+        margin-top: 3%;
+        font-size: 120%;
+    }
+    @include mq ('xlarge') {
+        margin-top: 3%;
+        font-size: 140%;
+    }
+}
+.section--structure-formelle--ellipse-1,
+.section--structure-formelle--ellipse-2,
+.section--structure-formelle--ellipse-3,
+.section--structure-formelle--ellipse-4,
+.section--structure-formelle--ellipse-5,
+.section--structure-formelle--ellipse-6,
+.section--structure-formelle--ellipse-7,
+.section--structure-formelle--ellipse-8,
+.section--structure-formelle--ellipse-9 {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: 50%;
+    left: 50%;
+    fill: $green;
+    z-index: 1;
+}
+.section--structure-formelle--ellipse-1 {
+    left: 32%;
+}
+.section--structure-formelle--ellipse-2 {
+    top: 82%;
+    left: 74%;
+}
+.section--structure-formelle--ellipse-3 {
+    top: 42%;
+    left: 15%;
+}
+.section--structure-formelle--ellipse-4 {
+    top: 65%;
+    left: 65%;
+}
+.section--structure-formelle--ellipse-5 {
+    left: 70%;
+    top: 30%;
+}
+.section--structure-formelle--ellipse-6 {
+    top: 80%;
+    left: 44%;
+}
+.section--structure-formelle--ellipse-7 {
+    top: 25%;
+    left: 20%;
+}
+.section--structure-formelle--ellipse-8 {
+    top: 38%;
+    left: 78%;
+}
+#structure-formelle__position {
+    transform: translate(-50%, -50%);
+}
+.structure-formelle--build {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    stroke: $green;
+    stroke-width: 2px;
+    fill: none;
+    opacity: 0.4;
+}
+.gradation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    stroke: $green;
+    stroke-width: 2px;
+    fill: none;
+}
+.section__gradation--ellipse-1,
+.section__gradation--ellipse-2,
+.section__gradation--ellipse-3,
+.section__gradation--ellipse-4,
+.section__gradation--ellipse-5,
+.section__gradation--ellipse-6 {
+    width: 0;
+}
+#gradation__position {
+    transform: translate(-50%, -50%);
+}
+.section--structure-non-formelle--ellipse-1,
+.section--structure-non-formelle--ellipse-2,
+.section--structure-non-formelle--ellipse-3,
+.section--structure-non-formelle--ellipse-4,
+.section--structure-non-formelle--ellipse-5,
+.section--structure-non-formelle--ellipse-6,
+.section--structure-non-formelle--ellipse-7,
+.section--structure-non-formelle--ellipse-8,
+.section--structure-non-formelle--ellipse-9 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10%;
+    height: 10%;
+    fill: $green;
+    z-index: 1;
+}
+.section--structure-non-formelle--ellipse-1 {
+    left: 20%;
+}
+.section--structure-non-formelle--ellipse-2 {
+    left: 20%;
+    top: 20%;
+}
+.section--structure-non-formelle--ellipse-3 {
+    top: 20%;
+    left: 50%;
+}
+.section--structure-non-formelle--ellipse-4 {
+    left: 80%;
+    top: 20%;
+}
+.section--structure-non-formelle--ellipse-5 {
+    left: 80%;
+    top: 50%;
+}
+.section--structure-non-formelle--ellipse-6 {
+    left: 80%;
+    top: 80%;
+}
+.section--structure-non-formelle--ellipse-7 {
+    top: 80%;
+    left: 50%;
+}
+.section--structure-non-formelle--ellipse-8 {
+    left: 20%;
+    top: 80%;
+}
+.structure-non-formelle--build {
+    position: absolute;
+    top: 48%;
+    left: 47.2%;
+    width: 69%;
+    fill: none;
+    stroke: $green;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+    opacity: 0.4;
+}
+#structure-non-formelle__position {
+    transform: translate(-50%, -50%);
+}
+.section--taille--ellipse-1,
+.section--taille--ellipse-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7%;
+    height: 7%;
+    z-index: 1;
+}
+#taille__position {
+    transform: translate(-50%, -50%);
+}
+.section--taille--ellipse-1 {
+    fill: $black;
+    z-index: 2;
+    top: 14%;
+    left: 54%;
+}
+.section--taille--ellipse-2 {
+  top: 44.5%;
+    width: 70%;
+    height: 70%;
+    fill: $yellow;
+}
+.section__couleurs--lines {
+    position: absolute;
+    top: 37%;
+    left: 21%;
+    width: 30%;
+    stroke-width: 9px;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    fill: none;
+    .st0 {
+        stroke: $blue;
+    }
+    .st1 {
+        stroke: $red;
+    }
+    .st2 {
+        stroke: $yellow;
+    }
+    .st3 {
+        stroke: $green;
+    }
+}
+.section__couleurs--lines-2 {
+  position: absolute;
+  top: 40%;
+  left: 70%;
+  width: 30%;
+  stroke-width: 30px;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  opacity: 0;
+  .st2 {
+      stroke: $yellow;
+  }
+}
+.section__couleurs--ellipse-1 {
+    position: absolute;
+    top: 39%;
+    left: 28%;
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    border: 1px solid $yellow;
+    overflow: hidden;
+}
+.section__couleurs--ellipse-2 {
+    position: absolute;
+    top: -35%;
+    left: -50%;
+    width: 150%;
+    fill: $yellow;
+    opacity: 0;
+}
+#couleurs__position {
+    transform: translate(-50%, -50%);
+}
+.couleurs__title-1,
+.couleurs__title-2,
+.couleurs__title-3 {
+  opacity: 0;
+}
+.repetition {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10%;
+    height: 10%;
+    fill: $blue;
+    z-index: 1;
+}
+.section__repetition--mmFreq1,
+.section__repetition--mmFreq2,
+.section__repetition--mmFreq3,
+.section__repetition--mmFreq4 {
+    top: 25%;
+    opacity: 0;
+}
+.section__repetition--mmFreq1 {
+    left: 10%;
+}
+.section__repetition--mmFreq2 {
+    left: 36%;
+}
+.section__repetition--mmFreq3 {
+    left: 63%;
+}
+.section__repetition--mmFreq4 {
+    left: 10%;
+}
+.section__repetition--not-mmFreq1,
+.section__repetition--not-mmFreq2,
+.section__repetition--not-mmFreq3,
+.section__repetition--not-mmFreq4,
+.section__repetition--not-mmFreq5 {
+    top: 55%;
+    opacity: 0;
+}
+.section__repetition--not-mmFreq1 {
+    left: 10%;
+}
+.section__repetition--not-mmFreq2 {
+    left: 25%;
+}
+.section__repetition--not-mmFreq3 {
+    left: 35%;
+}
+.section__repetition--not-mmFreq4 {
+    left: 70%;
+}
+.section__repetition--not-mmFreq5 {
+    left: 10%;
+}
+.section__repetition--rythme1,
+.section__repetition--rythme2,
+.section__repetition--rythme3,
+.section__repetition--rythme4,
+.section__repetition--rythme5,
+.section__repetition--rythme6 {
+    top: 85%;
+    opacity: 0;
+}
+.section__repetition--rythme1 {
+    left: 10%;
+}
+.section__repetition--rythme2 {
+    left: 20%;
+}
+.section__repetition--rythme3 {
+    left: 45%;
+}
+.section__repetition--rythme4 {
+    left: 55%;
+}
+.section__repetition--rythme5 {
+    left: 80%;
+}
+.section__repetition--rythme6 {
+    left: 10%;
+}
+.repetition__title-1,
+.repetition__title-2,
+.repetition__title-3 {
+    font-size: 60%;
+    opacity: 0;
+    @include mq ('medium') {
+        font-size: 100%;
+    }
+}
+.repetition__title-1 {
+    top: 10%;
+    left: 26%;
+    @include mq ('medium') {
+        left: 17%;
+    }
+    @include mq ('large') {
+        left: 20.5%;
+    }
+}
+.repetition__title-2 {
+    top: 40%;
+    left: 33%;
+    @include mq ('medium') {
+        left: 21%;
+    }
+}
+.repetition__title-3 {
+    top: 70%;
+    left: 15%;
+    @include mq ('medium') {
+        left: 12%;
+    }
+}
+#repetition__position {
+    transform: translate(-50%, -50%);
+}
+.miroir {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10%;
+    height: 10%;
+    fill: $blue;
+    z-index: 1;
+}
+.section--miroir--ellipse-1 {
+    left: 45%;
+}
+.section--miroir--ellipse-2 {
+    left: 55%;
+    opacity: 0.5;
+}
+.section__miroir--line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    stroke: $blue;
+    stroke-width: 2px;
+    height: 80%;
+    opacity: 1;
+}
+#miroir__position {
+    transform: translate(-50%, -50%);
+}
+.section__rotation--ellipse-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    border: 1px solid $blue;
+}
+.section__rotation--ellipse-1-small {
+    position: absolute;
+    left: 11%;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    background-color: $blue;
+    border: 5px solid $black;
+    @include mq ('medium') {
+        border: 10px solid $black;
+    }
+}
+.section__rotation--ellipse-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    background-color: $blue;
+}
+#rotation__position {
+    transform: translate(-50%, -50%);
+}
+.agrandir-retrecir {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10%;
+    fill: $blue;
+}
+.agrandir-retrecir--build {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    stroke: $blue;
+}
+.agrandir-retrecir--build--letter {
+    fill: $blue;
+}
+#agrandir-retrecir--build,
+#agrandir-retrecir__position {
+    transform: translate(-50%, -50%);
+}
+.direction {
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    width: 7%;
+    height: 7%;
+    fill: $blue;
+    z-index: 1;
+}
+.direction--build {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    width: 205%;
+    stroke: $blue;
+    stroke-width: 2px;
+    opacity: 0.8;
+}
+#direction--build {
+    transform: translateY(-50%);
+}
+#direction__position--left--1 {
+    transform: translate(-900%, -50%);
+}
+#direction__position--left--2 {
+    transform: translate(-700%, -50%);
+}
+#direction__position--left--3 {
+    transform: translate(-500%, -50%);
+}
+#direction__position--left--4 {
+    transform: translate(-300%, -50%);
+}
+#direction__position--left--5 {
+    transform: translate(-100%, -50%);
+}
+#direction__position--left--6 {
+    transform: translate(100%, -50%);
+}
+.attraction {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    fill: $red;
+}
+.section__attraction--ellipse-1 {
+    width: 40%;
+    top: 60%;
+    left: 60%;
+}
+.section__attraction--ellipse-2,
+.section__attraction--ellipse-3,
+.section__attraction--ellipse-4,
+.section__attraction--ellipse-5 {
+    width: 8%;
+    fill: none;
+    stroke: $red;
+    stroke-width: 0.5px;
+}
+.section__attraction--ellipse-2 {
+    top: 20%;
+    left: 60%;
+}
+.section__attraction--ellipse-3 {
+    top: 60%;
+    left: 21%;
+}
+.section__attraction--ellipse-4 {
+    top: 40%;
+    left: 25%;
+}
+.section__attraction--ellipse-5 {
+    top: 25%;
+    left: 40%;
+}
+#attraction__position {
+    transform: translate(-50%, -50%);
+}
+.symetrie {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25%;
+    height: 25%;
+    background-color: $red;
+    transform: translate(-50%, -50%);
+}
+.section--symetrie-rect-1 {
+    top: 17%;
+    opacity: 0;
+}
+.section--symetrie-rect-2 {
+    top: 83%;
+    opacity: 0;
+}
+.symetrie--build {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    stroke: $red;
+    stroke-width: 2px;
+}
+#symetrie--build {
+    transform: translate(-50%, -50%);
+}
+.balance__title-1,
+.balance__title-2 {
+    opacity: 0;
+}
+.balance {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    fill: $red;
+    z-index: 1;
+}
+.section__balance--ellipse-1 {
+    width: 5%;
+    top: 40%;
+    left: 50%;
+    opacity: 1;
+}
+.section__balance--ellipse-2 {
+    width: 5%;
+    top: 60%;
+    left: 50%;
+    opacity: 1;
+}
+#balance__position {
+    transform: translate(-50%, -50%);
+}
+.groupes__title-1 {
+    opacity: 0;
+}
+.groupes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18%;
+    height: 18%;
+    fill: $red;
+    z-index: 1;
+}
+.groupes--build {
+    position: absolute;
+    fill: none;
+    stroke: $red;
+    stroke-width: 2px;
+    width: 55%;
+    top: 50%;
+    left: 50%;
+}
+.groupes--build-circle {
+    position: absolute;
+    fill: none;
+    stroke: $red;
+    stroke-width: 0.1px;
+    width: 51%;
+    top: 55%;
+    left: 49.8%;
+}
+#groupes__position {
+    transform: translate(-50%, -50%);
+}
+.position__title-1,
+.position__title-2 {
+    opacity: 0;
+}
+.section__position--ellipse-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    border: 2px solid $red;
+}
+.section__position--ellipse-2 {
+    position: absolute;
+    fill: $red;
+    width: 20%;
+    top: 50%;
+    left: 50%;
+}
+#position__position {
+    transform: translate(-50%, -50%);
+}
+.espace {
+    fill: $red;
+}
+,
+.section--espace--ellipse-1,
+.section--espace--ellipse-2,
+.section--espace--ellipse-3,
+.section--espace--ellipse-4,
+.section--espace--ellipse-5 {
+    position: absolute;
+}
+.section--espace--ellipse-1 {
+    width: 80%;
+    top: 5%;
+    left: 35%;
+}
+.section--espace--ellipse-2 {
+    width: 55%;
+    top: 35%;
+    left: 92%;
+}
+.section--espace--ellipse-3 {
+    width: 55%;
+    top: 45%;
+    left: 65%;
+}
+.section--espace--ellipse-4 {
+    width: 50%;
+    top: 15%;
+    left: 70%;
+}
+.section--espace--ellipse-5 {
+    width: 100%;
+    top: 15%;
+    left: 5%;
+}
+.espace--build-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    border: 2px solid $red;
+    overflow: hidden;
+}
+.espace__title-1,
+.espace__title-2 {
+    opacity: 0;
+}
+#espace__position {
+    transform: translate(-50%, -50%);
+}
+.parallele {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    fill: $red;
+    stroke: none;
+    width: 60%;
+}
+.section__parallele--rect-1 {
+    top: 40%;
+    left: 57%;
+}
+.section__parallele--rect-2 {
+    top: 65%;
+    left: 43%;
+}
+.parallele--build,
+.parallele--build-2 {
+    position: absolute;
+    top: 52.4%;
+    left: 50%;
+    fill: none;
+    stroke: $red;
+    stroke-width: 2px;
+    width: 83%;
+    opacity: 0;
+}
+.parallele--build-2 {
+    top: 50.8%;
+}
+.parallele__title-2 {
+    opacity: 0;
+}
+#parallele__position {
+    transform: translate(-50%, -50%);
+}
+.tangente {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25%;
+    z-index: 1;
+    fill: $red;
+}
+.tangente--build {
+    position: absolute;
+    top: 50%;
+    left: 50.1%;
+    width: 85%;
+    fill: none;
+    stroke: $red;
+    stroke-width: 2px;
+}
+.section__tangente--ellipse-1 {
+    top: 59%;
+    left: 41.5%;
+}
+.section__tangente--ellipse-2 {
+    top: 41.5%;
+    left: 59%;
+}
+#tangente__position {
+    transform: translate(-50%, -50%);
+}
+.influence--title {
+    opacity: 0;
+}
+.influence-rect {
+    position: absolute;
+    z-index: 2;
+    width: 25%;
+    height: 25%;
+}
+.section__influence--rect1,
+.section__influence--rect12 {
+    top: 50%;
+    left: 20%;
+    background-color: $red;
+}
+.section__influence--rect1,
+.section__influence--rect2, {
+    background-color: $black;
+}
+.section__influence--rect2,
+.section__influence--rect22 {
+    top: 50%;
+    left: 80%;
+    background-color: $red;
+}
+.section__influence--ellipse-1 {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    background-color: $red;
+    border-radius: 50%;
+    width: 30%;
+    height: 30%;
+}
+#influence__position {
+    transform: translate(-50%, -50%);
+}
+.section--agrandir-retrecir,
+.section--attraction,
+.section--balance,
+.section--couleurs,
+.section--direction,
+.section--espace,
+.section--gradation,
+.section--groupes,
+.section--influence,
+.section--ligne,
+.section--miroir,
+.section--parallele,
+.section--point,
+.section--position,
+.section--repetition,
+.section--rotation,
+.section--structure-formelle,
+.section--structure-non-formelle,
+.section--surface,
+.section--symetrie-asymetrie,
+.section--taille,
+.section--tangente {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+    @include mq ('medium') {
+        top: 22vh;
+        width: 500px;
+        height: 500px;
+    }
+    @include mq ('large') {
+        top: 7vh;
+        width: 450px;
+        height: 450px;
+        position: absolute;
+        right: 17%;
+        transform: translateX(30%);
+    }
+    @include mq ('xlarge') {
+        top: 15vh;
+        width: 480px;
+        height: 480px;
+    }
+    @include mq ('xxlarge') {
+        top: 14vh;
+        width: 600px;
+        height: 600px;
+    }
+}
+.section--structure-formelle,
+.section--structure-non-formelle {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+    @include mq ('medium') {
+        top: 18.5vh;
+        width: 500px;
+        height: 500px;
+    }
+    @include mq ('large') {
+        top: 14.7vh;
+        width: 450px;
+        height: 450px;
+        position: absolute;
+        right: 17%;
+        transform: translateX(30%);
+    }
+    @include mq ('xlarge') {
+        top: 16vh;
+        width: 480px;
+        height: 480px;
+    }
+    @include mq ('xxlarge') {
+        width: 600px;
+        height: 600px;
+    }
+}

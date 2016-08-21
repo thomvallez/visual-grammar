@@ -1,0 +1,116 @@
+header {
+    top: 1vh;
+    position: fixed;
+    background-color: $black;
+    text-align: right;
+    right: 0;
+    padding: 12px 0 4px;
+    width: 100%;
+    z-index: 1;
+    @include mq ('medium') {
+        padding: 12px 0 0;
+    }
+    @include mq ('xxlarge') {
+        top: 3vh;
+    }
+}
+.header--chapiter {
+    background-color: $beige;
+    color: $black;
+    padding: 13px 7px 10px;
+    position: relative;
+    display: inline-block;
+    float: left;
+    left: 6.6%;
+    top: -5px;
+    @include mq ('medium') {
+        padding: 15px 8px 13px;
+    }
+}
+.header__link--about {
+    position: absolute;
+    // display: none;
+    margin: 15px 0 0;
+    right: 35.3333%;
+    text-align: right;
+    color: $beige;
+    right: 7%;
+    bottom: -1.5vh;
+    font-size: 1.4rem;
+    // margin-top: 30px;
+    // z-index: 1000;
+    &::after {
+        position: absolute;
+        content: '';
+        height: 1px;
+        background-color: $beige;
+        bottom: -2px;
+        left: 0;
+        transition: 0.28s cubic-bezier(.52, .01, .16, 1);
+        z-index: -1;
+    }
+    &:hover {
+      transition: 0.28s cubic-bezier(.52, .01, .16, 1);
+        &::after {
+            width: 100%;
+        }
+    }
+    @include mq ('medium') {
+        right: 28.3%;
+        margin: 15px 0 0;
+        font-size: 1.8rem;
+        bottom: inherit;
+        display: inline-block;
+    }
+}
+.header__btn--menu {
+    right: 6.6%;
+    position: relative;
+    display: inline-block;
+    margin: 5px 0 0;
+    background-color: transparent;
+    color: $beige;
+    border: 2px solid $beige;
+    padding: 9px 15px 8px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.35s ease-out;
+    outline: none;
+    @include mq ('large') {
+        &:hover {
+            transition: 0.28s cubic-bezier(.52, .01, .16, 1);
+            animation: rainbow 3s infinite alternate;
+            color: $black;
+        }
+    }
+}
+.on::after {
+    content: "Fermer";
+    position: absolute;
+    padding-top: 9px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $black;
+    z-index: 10;
+    color: $beige;
+}
+@keyframes rainbow {
+    0% {
+        background-color: $green;
+        border: 2px solid $green;
+    }
+    33% {
+        background-color: $yellow;
+        border: 2px solid $yellow;
+    }
+    66% {
+        background-color: $blue;
+        border: 2px solid $blue;
+    }
+    100% {
+        background-color: $red;
+        border: 2px solid $red;
+    }
+}

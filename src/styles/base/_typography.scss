@@ -1,0 +1,186 @@
+/*
+ * Global
+ */
+
+/*
+ * @font-face
+ */
+
+
+$ff: 'program', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !default;
+
+/*
+ * HTML and BODY
+ */
+
+$base-font-size: 16 !default;
+
+html {
+  font-size: calc-percent(10, $base-font-size);
+}
+
+body {
+  color: $black;
+  font-family: $ff;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/*
+ * Sizes, spacing and rythm
+ */
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3.6rem;
+  line-height: 0;
+
+  @include mq('medium') {
+    font-size: 7.2rem;
+  }
+
+  @include mq('xlarge') {
+    font-size: 10.8rem;
+  }
+}
+
+.header--chapiter,
+.nav__block--title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 0;
+  text-transform: uppercase;
+
+  @include mq('medium') {
+    font-size: 2rem;
+  }
+}
+
+.nav__list--link {
+  font-size: 1.8rem;
+  @include mq('xlarge') {
+    font-size: 2.2rem;
+  }
+}
+
+// Block elements
+blockquote,
+p {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+
+  @include mq('medium') {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+  @include mq('xlarge') {
+    font-size: 3rem;
+    line-height: 3.4rem;
+  }
+  @include mq('xxlarge') {
+    font-size: 3.4rem;
+    line-height: 4rem;
+  }
+}
+
+header {
+  a, button {
+    font-weight: 500;
+    @include mq('medium') {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+// Inline
+a {
+  color: $black;
+  text-decoration: none;
+  &:after {
+      position: absolute;
+      content: '';
+      height: 1px;
+      background-color: $beige;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      transition: .3s cubic-bezier(.52, .01, .16, 1);
+      z-index: 1;
+  }
+  &:hover {
+    transition: .3s cubic-bezier(.52, .01, .16, 1);
+      &:after {
+          width: 100%;
+          transition: .3s cubic-bezier(.52, .01, .16, 1);
+      }
+  }
+}
+
+
+/*
+ * Advanced settings
+ */
+// Turn on kerning and ligatures
+html,
+body {
+  font-feature-settings: 'kern', 'liga';
+}
+
+// Turn off kerning and ligatures for monospace type
+pre,
+code {
+  font-feature-settings: normal;
+}
+
+.section__chapitre--title {
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.section__number {
+  font-size: 20rem;
+
+  @include mq('medium') {
+    font-size: 30rem;
+  }
+  @include mq('xlarge') {
+    font-size: 40rem;
+  }
+}
+.number-title {
+  font-size: 11rem;
+  @include mq('medium') {
+    font-size: 22rem;
+  }
+  @include mq('large') {
+    font-size: 20rem;
+  }
+}
+.small {
+  font-size: 205%;
+  @include mq('medium') {
+    font-size: 7.2rem;
+  }
+  @include mq('xlarge') {
+    font-size: 10.8rem;
+  }
+
+  @include mq('xxlarge') {
+    font-size: 14.2rem;
+  }
+}
